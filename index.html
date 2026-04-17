@@ -126,13 +126,13 @@
       <section class="section wrap" id="gallery" aria-labelledby="images-heading">
         <h2 id="images-heading">Изображения разных размеров</h2>
         <p class="section-intro">
-          Ниже — фотографии с сервиса Lorem Picsum (случайные, но стабильные по seed). Проверяйте lazy-loading,
-          object-fit и сетку карточек.
+          Файлы лежат в <code>public/media/images/</code> и после сборки копируются в <code>dist/media/images/</code> —
+          всё отдаётся с того же хоста, что и страница.
         </p>
         <div class="image-grid">
           <figure class="img-tile img-tile--tall">
             <img
-              src="https://picsum.photos/seed/forest/600/900"
+              src="/media/images/tall-2x3.jpg"
               alt="Вертикальное фото: природа"
               width="600"
               height="900"
@@ -142,7 +142,7 @@
           </figure>
           <figure class="img-tile">
             <img
-              src="https://picsum.photos/seed/city/800/500"
+              src="/media/images/wide-8x5.jpg"
               alt="Городской пейзаж широкий"
               width="800"
               height="500"
@@ -152,7 +152,7 @@
           </figure>
           <figure class="img-tile img-tile--square">
             <img
-              src="https://picsum.photos/seed/abstract/500/500"
+              src="/media/images/square-1x1.jpg"
               alt="Абстрактная текстура квадрат"
               width="500"
               height="500"
@@ -162,7 +162,7 @@
           </figure>
           <figure class="img-tile">
             <img
-              src="https://picsum.photos/seed/water/640/360"
+              src="/media/images/wide-16x9.jpg"
               alt="Горизонтальный кадр"
               width="640"
               height="360"
@@ -177,26 +177,22 @@
         <div class="wrap">
           <h2 id="video-heading">Видео</h2>
           <p class="section-intro">
-            Два коротких демо-ролика с общедоступных URL. Если сеть недоступна, элементы покажут пустые области —
-            это нормально для офлайн-теста.
+            Видео и постеры — локальные файлы в <code>public/media/videos/</code> и <code>public/media/images/</code>.
           </p>
           <div class="video-grid">
             <figure class="video-card">
-              <video controls preload="metadata" poster="https://picsum.photos/seed/video1/640/360">
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+              <video controls preload="metadata" poster="/media/images/poster-bbb.jpg">
+                <source src="/media/videos/bbb-sample.mp4" type="video/mp4" />
                 Ваш браузер не поддерживает встроенное видео.
               </video>
-              <figcaption>Короткий клип (Big Buck Bunny, демо W3Schools)</figcaption>
+              <figcaption>Короткий фрагмент (Big Buck Bunny, демо-ролик)</figcaption>
             </figure>
             <figure class="video-card">
-              <video controls preload="metadata" poster="https://picsum.photos/seed/video2/640/360">
-                <source
-                  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
-                  type="video/mp4"
-                />
+              <video controls preload="metadata" poster="/media/images/poster-flower.jpg">
+                <source src="/media/videos/flower.mp4" type="video/mp4" />
                 Ваш браузер не поддерживает встроенное видео.
               </video>
-              <figcaption>MDN: цветок (cc0)</figcaption>
+              <figcaption>Демо «цветок» (CC0)</figcaption>
             </figure>
           </div>
         </div>
@@ -205,19 +201,19 @@
       <section class="section wrap" aria-labelledby="audio-heading">
         <h2 id="audio-heading">Аудио</h2>
         <p class="section-intro">
-          Два MP3 для проверки плеера: длинная композиция и короткий фрагмент.
+          Два MP3 из <code>public/media/audio/</code>: длинная композиция и короткий фрагмент.
         </p>
         <div class="audio-list">
           <figure class="audio-item">
-            <figcaption>SoundHelix — демо-трек (длиннее)</figcaption>
-            <audio controls preload="none">
-              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+            <figcaption>Демо-трек (длиннее)</figcaption>
+            <audio controls preload="metadata">
+              <source src="/media/audio/soundhelix-demo.mp3" type="audio/mpeg" />
             </audio>
           </figure>
           <figure class="audio-item">
-            <figcaption>W3Schools — короткий звук (horse)</figcaption>
-            <audio controls preload="none">
-              <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+            <figcaption>Короткий звук (horse)</figcaption>
+            <audio controls preload="metadata">
+              <source src="/media/audio/horse.mp3" type="audio/mpeg" />
             </audio>
           </figure>
         </div>
