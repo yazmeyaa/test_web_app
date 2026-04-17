@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тестовая статическая страница</title>
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">К основному содержимому</a>
+
+    <header class="site-header">
+      <div class="wrap">
+        <p class="eyebrow">Статическая сборка · Vite</p>
+        <h1>Демо-страница для проверки вёрстки и медиа</h1>
+        <p class="lead">
+          Здесь собраны длинные абзацы, списки, цитаты, изображения разных пропорций,
+          векторная графика, пара видеороликов и аудио. Оформление спокойное, без кислотных цветов.
+        </p>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="section wrap" aria-labelledby="text-heading">
+        <h2 id="text-heading">Текст и типографика</h2>
+        <div class="prose-grid">
+          <div class="prose">
+            <p>
+              Этот блок имитирует обычную статью: короткие и длинные предложения,
+              <strong>выделения</strong>, <em>курсив</em> и
+              <a href="#gallery">ссылки внутри страницы</a>. Типографика рассчитана на комфортное чтение:
+              межстрочный интервал около 1.6, ограниченная ширина колонки, мягкий контраст.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+              voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+            <blockquote>
+              <p>
+                «Хороший тестовый макет не кричит о себе: он даёт глазу отдых и позволяет сосредоточиться
+                на содержании.»
+              </p>
+              <cite>— условный автор цитаты</cite>
+            </blockquote>
+            <p>
+              Ниже — нумерованный список с вложенностью и маркированный список, чтобы проверить отступы
+              и маркеры в разных браузерах.
+            </p>
+            <ol>
+              <li>Первый пункт: введение и постановка задачи.</li>
+              <li>
+                Второй пункт с подпунктами:
+                <ul>
+                  <li>подпункт A — короткий;</li>
+                  <li>подпункт B — чуть длиннее, с пояснением про переносы строк и выравнивание;</li>
+                  <li>подпункт C — финальный штрих.</li>
+                </ul>
+              </li>
+              <li>Третий пункт: выводы и дальнейшие шаги.</li>
+            </ol>
+          </div>
+          <aside class="aside-note" aria-label="Краткая справка">
+            <h3>Краткая справка</h3>
+            <p>
+              Боковая колонка демонстрирует работу сетки и вторичного текста. Здесь можно разместить
+              метаданные, оглавление или примечания редактора.
+            </p>
+            <dl class="meta-list">
+              <dt>Версия</dt>
+              <dd>1.0.0</dd>
+              <dt>Сборка</dt>
+              <dd><code>npm run build</code></dd>
+              <dt>Выход</dt>
+              <dd><code>dist/</code></dd>
+            </dl>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section section--tint" aria-labelledby="svg-heading">
+        <div class="wrap">
+          <h2 id="svg-heading">Встроенные и файловые SVG</h2>
+          <p class="section-intro">
+            Иконки и иллюстрации в векторе масштабируются без потери чёткости — удобно для ретины и печати.
+          </p>
+          <div class="svg-showcase">
+            <figure class="svg-card">
+              <svg class="inline-svg" viewBox="0 0 120 120" role="img" aria-labelledby="svg-waves-title">
+                <title id="svg-waves-title">Абстрактные волны</title>
+                <defs>
+                  <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="var(--accent)" stop-opacity="0.85" />
+                    <stop offset="100%" stop-color="var(--accent-2)" stop-opacity="0.6" />
+                  </linearGradient>
+                </defs>
+                <rect width="120" height="120" rx="16" fill="var(--surface-2)" />
+                <path
+                  d="M0 78 Q30 58 60 78 T120 78 V120 H0 Z"
+                  fill="url(#g1)"
+                  opacity="0.9"
+                />
+                <path
+                  d="M0 92 Q35 72 70 92 T140 92"
+                  fill="none"
+                  stroke="var(--text-muted)"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                />
+              </svg>
+              <figcaption>Инлайн SVG с градиентом</figcaption>
+            </figure>
+            <figure class="svg-card">
+              <img src="/assets/badge.svg" alt="Декоративный значок с буквой T" width="120" height="120" loading="lazy" />
+              <figcaption>Отдельный файл <code>badge.svg</code></figcaption>
+            </figure>
+            <figure class="svg-card">
+              <img src="/assets/pattern.svg" alt="Паттерн из кругов" width="200" height="100" loading="lazy" />
+              <figcaption>Широкий паттерн</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" id="gallery" aria-labelledby="images-heading">
+        <h2 id="images-heading">Изображения разных размеров</h2>
+        <p class="section-intro">
+          Ниже — фотографии с сервиса Lorem Picsum (случайные, но стабильные по seed). Проверяйте lazy-loading,
+          object-fit и сетку карточек.
+        </p>
+        <div class="image-grid">
+          <figure class="img-tile img-tile--tall">
+            <img
+              src="https://picsum.photos/seed/forest/600/900"
+              alt="Вертикальное фото: природа"
+              width="600"
+              height="900"
+              loading="lazy"
+            />
+            <figcaption>Высокий кадр 2:3</figcaption>
+          </figure>
+          <figure class="img-tile">
+            <img
+              src="https://picsum.photos/seed/city/800/500"
+              alt="Городской пейзаж широкий"
+              width="800"
+              height="500"
+              loading="lazy"
+            />
+            <figcaption>Широкий 8:5</figcaption>
+          </figure>
+          <figure class="img-tile img-tile--square">
+            <img
+              src="https://picsum.photos/seed/abstract/500/500"
+              alt="Абстрактная текстура квадрат"
+              width="500"
+              height="500"
+              loading="lazy"
+            />
+            <figcaption>Квадрат 1:1</figcaption>
+          </figure>
+          <figure class="img-tile">
+            <img
+              src="https://picsum.photos/seed/water/640/360"
+              alt="Горизонтальный кадр"
+              width="640"
+              height="360"
+              loading="lazy"
+            />
+            <figcaption>16:9</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section--tint" aria-labelledby="video-heading">
+        <div class="wrap">
+          <h2 id="video-heading">Видео</h2>
+          <p class="section-intro">
+            Два коротких демо-ролика с общедоступных URL. Если сеть недоступна, элементы покажут пустые области —
+            это нормально для офлайн-теста.
+          </p>
+          <div class="video-grid">
+            <figure class="video-card">
+              <video controls preload="metadata" poster="https://picsum.photos/seed/video1/640/360">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает встроенное видео.
+              </video>
+              <figcaption>Короткий клип (Big Buck Bunny, демо W3Schools)</figcaption>
+            </figure>
+            <figure class="video-card">
+              <video controls preload="metadata" poster="https://picsum.photos/seed/video2/640/360">
+                <source
+                  src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+                  type="video/mp4"
+                />
+                Ваш браузер не поддерживает встроенное видео.
+              </video>
+              <figcaption>MDN: цветок (cc0)</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="section wrap" aria-labelledby="audio-heading">
+        <h2 id="audio-heading">Аудио</h2>
+        <p class="section-intro">
+          Два MP3 для проверки плеера: длинная композиция и короткий фрагмент.
+        </p>
+        <div class="audio-list">
+          <figure class="audio-item">
+            <figcaption>SoundHelix — демо-трек (длиннее)</figcaption>
+            <audio controls preload="none">
+              <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+            </audio>
+          </figure>
+          <figure class="audio-item">
+            <figcaption>W3Schools — короткий звук (horse)</figcaption>
+            <audio controls preload="none">
+              <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg" />
+            </audio>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section section--dark" aria-labelledby="more-text-heading">
+        <div class="wrap prose prose--on-dark">
+          <h2 id="more-text-heading">Ещё текст для объёма</h2>
+          <p>
+            Иногда нужно проверить, как страница ведёт себя при большом количестве подряд идущих абзацев.
+            Здесь три абзаца подряд с разной длиной строк — удобно оценить ритм и «цвет» полосы.
+          </p>
+          <p>
+            В русской типографике принято использовать кавычки-ёлочки, длинное тире и неразрывные пробелы
+            там, где это уместно. В вебе часть правил упрощают, но базовая читабельность остаётся приоритетом:
+            не делайте строки слишком длинными и не сжимайте межстрочный интервал до «газетного» вида.
+          </p>
+          <p>
+            English paragraph for mix: The quick brown fox jumps over the lazy dog. Pack my box with five dozen
+            liquor jugs. Sphinx of black quartz, judge my vow. These pangrams help test font rendering and
+            letter-spacing without relying on Lorem Ipsum alone.
+          </p>
+          <pre class="code-sample" tabindex="0"><code>// Пример блока кода
+function greet(name) {
+  return `Hello, ${name}`;
+}
+console.log(greet('test'));</code></pre>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="wrap">
+        <p>
+          Статическая сборка: <code>npm install</code> → <code>npm run build</code> → каталог <code>dist/</code>.
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

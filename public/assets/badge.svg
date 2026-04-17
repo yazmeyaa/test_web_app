@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120" role="img" aria-labelledby="t">
+  <title id="t">Badge</title>
+  <defs>
+    <linearGradient id="b" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#3d6b8f"/>
+      <stop offset="100%" stop-color="#5a8f7b"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="104" height="104" rx="28" fill="url(#b)"/>
+  <text x="60" y="78" text-anchor="middle" font-family="system-ui, sans-serif" font-size="48" font-weight="700" fill="#fffcf7">T</text>
+</svg>

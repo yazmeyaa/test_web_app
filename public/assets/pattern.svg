@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="100" viewBox="0 0 200 100" role="img" aria-labelledby="p">
+  <title id="p">Circle pattern</title>
+  <rect width="200" height="100" fill="#ece8e1"/>
+  <g fill="none" stroke="#3d6b8f" stroke-opacity="0.35" stroke-width="2">
+    <circle cx="40" cy="30" r="18"/>
+    <circle cx="100" cy="55" r="22"/>
+    <circle cx="165" cy="35" r="16"/>
+    <circle cx="75" cy="80" r="12"/>
+    <circle cx="140" cy="78" r="14"/>
+  </g>
+</svg>
